@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-r=l(z7t)x1945anx1_ckllnao%z591kr)7@cd_k&q^+#an$z-m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 REST_FRAMEWORK = {
@@ -158,6 +158,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+# settings.py
+
+# Define the URL for static files
+
+
+# Define the directories where static files are located
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 STATIC_URL = 'static/'
 
