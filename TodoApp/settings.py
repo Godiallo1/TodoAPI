@@ -117,10 +117,16 @@ WSGI_APPLICATION = 'TodoApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# settings.py
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'godwin_sampledb',
+        'USER': 'godwin',
+        'PASSWORD': 'ya9E*JG5Wc9UEbN',
+        'HOST': 'postgresql-godwin.alwaysdata.net',
+        'PORT': '5432',
     }
 }
 
